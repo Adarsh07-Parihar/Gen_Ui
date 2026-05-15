@@ -99,16 +99,10 @@ function Dashboard() {
               animate={{opacity:1, y:0}}
               transition={{delay: i*0.05}}
               whileHover={{y:-6}}
-              onClick={()=>navigate(`/editor/${w._id}`)}
               className='rounded-2xl bg-white/5 border border-white/10 overflow-hidden hover:bg-white/10 transition flex flex-col'
                >
 
-                <div className='relative h-40 bg-black cursor-pointer'
-  onClick={() => {
-    if (w && w._id) {
-      navigate(`/editor/${w._id}`)
-    }
-  }}>
+                <div className='relative h-40 bg-black cursor-pointer'  onClick={()=>navigate(`/editor/${w._id}`)}>
                   <iframe srcDoc={w.latestCode} className='absolute inset-0 w-[140%] h-[140%] scale-[0.72] origin-top-left pointer-events-none bg-white'/>
                   <div className='absolute inset-0 bg-black/30'/>
                 </div>
