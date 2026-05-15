@@ -10,7 +10,7 @@ import { setUserData } from "../redux/userSlice";
 const plans = [
     {
         key: "free",
-        name: "Free",
+        name: "free",
         price: "₹0",
         credits: 100,
         description: "Perfect to explore WebGen.ai",
@@ -25,7 +25,7 @@ const plans = [
 
     {
         key: "pro",
-        name: "Pro",
+        name: "pro",
         price: "₹499",
         credits: 500,
         description: "For serious creators & freelancers",
@@ -40,7 +40,7 @@ const plans = [
 
     {
         key: "enterprise",
-        name: "Enterprise",
+        name: "enterprise",
         price: "₹1499",
         credits: 1000,
         description: "For teams & power users",
