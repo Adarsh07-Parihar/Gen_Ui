@@ -257,7 +257,7 @@ ${data.payment.transactionId}
 
                             onClick={() => {
 
-                                if (p.name === "Free") {
+                                if (p.name === "free") {
 
                                     alert(`
 ✅ Free Plan Activated
