@@ -14,11 +14,11 @@ export const fakePayment = async (req, res) => {
         // 🔥 credits according to plan
         let creditsToAdd = 0;
 
-        if (plan === "Pro") {
+        if (plan === "pro") {
             creditsToAdd = 500;
         }
 
-        else if (plan === "Enterprise") {
+        else if (plan === "enterprise") {
             creditsToAdd = 1000;
         }
 
