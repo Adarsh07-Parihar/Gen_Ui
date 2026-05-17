@@ -21,11 +21,16 @@ export const generateResponse = async (prompt) => {
 
                 {
                     role: "system",
-                    content:
-`Return ONLY valid JSON.
-Do not include markdown.
-Do not use triple backticks.
-Do not explain anything.`
+                    content: `
+Return ONLY valid JSON.
+
+Rules:
+- Escape all quotes properly
+- Do not include markdown
+- Do not use triple backticks
+- Do not explain anything
+- Return compact valid JSON only
+`
                 },
 
                 {
@@ -49,5 +54,12 @@ Do not explain anything.`
 
     const data = await res.json();
 
-    return data.choices[0].message.content;
+   const raw = data.choices[0].message.content;
+
+const cleaned = raw
+  .replace(/```json/g, "")
+  .replace(/```/g, "")
+  .trim();
+
+return cleaned;
 };
